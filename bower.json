@@ -1,0 +1,8 @@
+{
+  "name": "fossgis2015",
+  "version": "0.0.1",
+  "dependencies": {
+    "reveal.js": "3.0.0",
+    "bootstrap": "2.3.2"
+  }
+}
