@@ -1,0 +1,20 @@
+{
+  "layout": "A4 Portrait",
+  "outputFormat": "pdf",
+  "attributes": {
+    "title": "Sample Print",
+    "map": {
+    "projection": "EPSG:900913",
+    "dpi": 72,
+    "rotation": 0,
+    "center": [957352.8034848921, 5936844.140278816],
+    "scale": 25000,
+      "layers": [
+        {
+          "type": "osm",
+          "baseURL": "http://tile.osm.ch/osm-swiss-style"
+        }
+      ]
+    }
+  }
+}

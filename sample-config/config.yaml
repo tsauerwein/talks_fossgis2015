@@ -1,0 +1,21 @@
+
+templates:
+  A4 Portrait: !template
+    reportTemplate: report.jrxml
+    attributes:
+      title: !string {}
+      map: !map
+        width: 555
+        height: 730
+        maxDpi: 600
+      scalebar: !scalebar
+        width: 230
+        height: 40
+    processors:
+    - !reportBuilder
+      directory: '.'
+    - !createMap
+      inputMapper: {map: map}
+      outputMapper: {mapSubReport: mapSubReport}
+    - !createScalebar {}
+

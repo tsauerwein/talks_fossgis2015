@@ -82,267 +82,116 @@
         <section>
           <h1 class="beefy">MapFish Print 3</h1>
           <h2 style="font-style: italic;">Printing maps like a boss</h2>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
           <img src="img/logo_mapfish.png" style="opacity: 0.5;">
-          <!--
-          -->
+          <img src="img/logo_c2c_px.png" style="opacity: 0.8;">
+          <p>&nbsp;</p>
           <p>Tobias Sauerwein</p>
           <p>Camptocamp</p>
-        </section>
-        <section>
-          <h2>Introduction</h2>
+          <p>&nbsp;</p>
           <!--
-          - And a bit of history
           -->
-          <div id="ol2-to-ol3">
-            <img src="img/ol2.png"><span>&nbsp;&#8680;</span><img src="img/ol3-logo.png">
+        </section>
+        <section>
+          <h1 class="beefy">Camptocamp</h1>
+          <img src="img/c2c.png" style="opacity: 0.5; width: 100%; ">
+        </section>
+        <section>
+          <h1 class="beefy">MapFish Print?</h1>
+          <img src="img/sample_bl.png" style="width: 90%; ">
+        </section>
+        <section>
+          <h1 class="beefy">The past: MapFish Print 2</h1>
+          <div style="position: relative;">
+            <img src="img/mfp2.png" style="width: 90%; ">
+            <img src="img/sau.jpg" class="fragment"
+              style="width: 60%; position: absolute; right: 100px; bottom: -40px; opacity: 0.9;">
           </div>
-          <ul>
-            <li>New version of OL</li>
-            <li>Version 2's been around since 2006</li>
-            <li>Development began in 2013</li>
-            <li>Complete rewrite!</li>
-            <li>v3.0 released August, 2014</li>
-            <!--
-            - OL3 is rather new
-            - v3.1 was released one month ago
-            - v3.2 will be released next week
-            - monthly releases
-            -->
-          </ul>
         </section>
         <section>
-          <h2>Goals</h2>
-          <ul>
-            <li>Feature-complete library</li>
-            <!--
-            - Support for many data providers
-            - Support for many data formats
-            - OGC support
-            - Just like OL2 in that sense
-            -->
-            <li>More consistent API</li>
-            <!--
-            - Simpler
-            - More consistent
-            -->
-            <li>Smaller builds</li>
-            <!--
-            - Closure Compiler
-            -->
-            <li>Push the limits of vector rendering</li>
-            <!--
-            - Support for complex styling
-            - Be able to draw many features
-            - Many more than OL2
-            -->
-            <li>Use Computer Graphics technologies (WebGL & Canvas)</li>
-            <!--
-            - Performance (GPU)
-            - Flexibility (pixel detection)
-            - Open the doors to 3D
-            -->
-          </ul>
-        </section>
-        <section>
-          <h2>« Maps as Graphics »</h2>
-          <img class="framed" src="img/teapot-map.jpg" alt="Teapot map">
-          <!-- Notes:
-          - Rely on the Canvas and WebGL Graphics APIs
-          - Performance (GPU)
-          - Flexibility
-          - 3D
-          -->
-        </section>
-        <section>
-          <h2>Positionning</h2>
-          <br>
-          <div id="logos">
-            <div class="fragment" data-fragment-index="0">
-              <img src="img/ol2-logo.png"> OpenLayers 2
-              <br><br>
-              <img src="img/leaflet-logo.png">
+          <h1 class="beefy">MapFish Print 3</h1>
+          <div style="position: relative; height: 500px;">
+            <div class="fragment"
+              style="position: absolute; top: 0px; left: 50px;">
+              <img src="img/logo_geotools.png"
+                style="height: 80px"><br>
+              <span>Mapping</span>
             </div>
-            <div class="fragment" data-fragment-index="2">
-              <img src="img/ol3-logo.png">
-              <br>
-              OpenLayers 3
+            <div class="fragment"
+              style="position: absolute; top: 0px; right: 50px;">
+              <img src="img/logo_jasperreports.png"
+                style="height: 80px"><br>
+              <span>Layout</span>
             </div>
-            <div class="fragment" data-fragment-index="1">
-              <img src="img/cesium-logo.png">
-              <br><br>
-              <img src="img/owg-logo.png">
+            <div class="fragment">
+              <img src="img/logo_spring.png"
+                style="width: 300px; margin-top: 150px;"><br>
+              <span>Plugin Framework</span>
+            </div>
+            <div class="fragment">
+              <img src="img/logo_mapfish.png"
+                style="width: 200px; opacity: 0.5; margin-top: 60px;">
+              <p style="font-weight: bold;">MapFish Print</p>
+              <p>Web API / Security / Widgets</p>
             </div>
           </div>
-          <br>
-          <p class="fragment">An ambitious library for ambitious maps!</p>
-          <!-- Notes:
-          - Leaflet:
-            - Nice API, easy to work with
-            - Lightweight, works great on mobile
-          - Cesium:
-            - Fantastic virtual globe solution
-          - OL3
-            - Compared to Leaflet:
-              - Support for many layer types, formats, etc
-              - Support for irregular tile grids
-              - Support for local projections
-              - Support for arbitrary resolutions
-              - Support for advanced drawing tools
-              - Built-in functionality, as opposed to 3d-party plugins
-            - Compared to OL2:
-              - Better and more consistent APIs
-              - Smaller builds
-              - Better performance
-              - Flexible architecture
-            - Compared to Cesium:
-              - Smaller and more compact than Cesium
-              - Easier to use
-              - WebGL not required
-              - Better mobile support
-            - Focus on performance
-              - WebGL
-              - GPU acceleration
-              - requestAnimationFrame
-              - Closure Compiler
-          -->
         </section>
         <section>
-          <h2>Features</h2>
-          <!--
-          - Some of the features natively provided by OL3, that other
-            libraries don't support.
-          -->
-          <ul>
-            <li>Map rotations</li>
-            <!--
-            - Useful when building navigation systems
-            -->
-            <li>Animations</li>
-            <!--
-            - OL3 provides an animation framework that can be used
-              to animate the map in different ways
-            -->
-            <li>Local/custom projections</li>
-            <!--
-            - Local projection for your area
-            -->
-            <li>Arbitrary tile grids (WMTS)</li>
-            <!--
-            - Not only OSM-like tile grids
-            -->
-            <li>Various data providers and formats<br/>(OSM, BingMaps, WMS, GeoJSON, KML…)</li>
-            <!--
-            - OSM, MapQuest, BingMaps
-            - WMS, WMTS
-            - We do not support Google Maps because Google do not
-              allow direct access to their tiles
-            -->
-            <li>Image effect/pixel manipulation</li>
-            <li>« Complex vector »</li>
-            <li class="fragment">…</li>
-          </ul>
+          <h1 class="beefy">Print Process</h1>
+          <img src="img/process.png" style="width: 600px; ">
         </section>
         <section>
-          <a href="./examples/rotation.html">Example #1</a> (Rotation, Animation, Vector)
-          <!--
-          - Introduce map: canvas renderer, MapQuest layer, vector layer, labels
-            markers, boundaries of countries
-          - Rotation: labels and markers do not rotate with the map
-          - Animation: fly-to animation (combination of pan + zoom animations), no
-            streching of labels, markers and lines during animations
-          -->
+          <h1 class="beefy">YAML Configuration</h1>
+          <pre><code>
+templates:
+  A4 Portrait: !template
+    reportTemplate: report.jrxml
+    attributes:
+      ...
+    processors:
+      ...
+          </code></pre>
         </section>
         <section>
-          <h2>« Draw early, Draw often »</h2>
-          <img src="img/mona320x360_html5.jpg">
-          <!--
-          - We need to re-render the map very ofter to get good rendering
-            quality at any time (even during animations)
-          -->
+          <h1 class="beefy">YAML Configuration (attributes)</h1>
+          <pre><code>
+templates:
+  A4 Portrait: !template
+    reportTemplate: report.jrxml
+    attributes:
+      title: !string {}
+      map: !map
+        width: 555
+        height: 730
+        maxDpi: 600
+      scalebar: !scalebar
+        width: 230
+        height: 40
+    processors:
+      ...
+          </code></pre>
         </section>
         <section>
-          <h3>For good rendering quality:</h3>
-          <ul>
-            <li><span class="underline">Vectors</span> redrawn at each animation frame</li>
-            <li>While interacting and animating</li>
-            <li>(Hopefully) At 60 fps!</li>
-          </ul>
+          <h1 class="beefy">YAML Configuration (processors)</h1>
+          <pre><code>
+templates:
+  A4 Portrait: !template
+    reportTemplate: report.jrxml
+    attributes:
+      ...
+    processors:
+    - !reportBuilder
+      directory: '.'
+    - !createMap
+      inputMapper: {map: map}
+      outputMapper: {mapSubReport: mapSubReport}
+    - !createScalebar {}
+          </code></pre>
         </section>
         <section>
-          <h2>Performance challenge!</h2>
-          <p class="fragment">Let's look at the techniques used…</p>
-        </section>
-        <section>
-          <h2>#1 Batching</h2>
-          <div>
-            <p>Minimize data processing and manipulation:</p>
-            <ul>
-              <li>Style calculations</li>
-              <li>Geometry simplifications</li>
-              <li>R-tree lookups</li>
-              <li>Object creations (less pressure on GC)</li>
-            </ul>
-            <br>
-            <br>
-            <p>&#8680; Replay batch during animations/interactions</p>
-          </div>
-        </section>
-        <section>
-          <h2>#2 Geometry Simplification</h2>
-          <div>
-            <ul>
-              <li>Douglas Peuker for lines</li>
-              <li>Quantization for polygons (to maintain topology)</li>
-            </ul>
-            <br>
-            <br>
-            <p>(Also allows for better rendering quality.)</p>
-          </div>
-        </section>
-        <section>
-          <h2>#3 Over-simplification</h2>
-          <p>Over-simplification and clipping for the parts that are outside the viewport.</p>
-          <img src="img/over-simplification.png">
-        </section>
-        <section>
-          <a href="./examples/fractal.html">Example #2</a> (Complex and large features)
-        </section>
-        <section>
-          <h2>Hit Detection</h2>
-          <!--
-          - Capability to detect features at a given pixel
-          -->
-          <p>Principle: redraw a subset of the scene in a small and off-screen
-          canvas, and test if there's a color.</p>
-          <!--
-          - Features under others are detectable
-          - Pixel-perfect detection
-          - Tolerance for line detection on touch devices
-          -->
-        </section>
-        <section>
-          <a href="./examples/hitdetection.html">Example #3</a> (Hit Detection)
-        </section>
-        <section>
-          <h3>Hit Detection for raster layers coming soon…</h3>
-        </section>
-        <section>
-          <h2>Roadmap</h2>
-          <ul>
-            <li>Draw lines, polygons and text with WebGL</li>
-            <li>Support tilted/perspective views</li>
-            <li>Finish online build tool</li>
-            <li>Improve our CommonJS/distribution story</li>
-            <li>Improve the documentation</li>
-            <li>Continue with the Cesium integration (ol3-cesium)</li>
-          </ul>
-          <br>
-          <br>
-          <p>&#8680; Code sprint in April…</p>
-        </section>
-        <section>
-          <h3>Tilted view prototype</h3>
-          <a href="./examples/tilt.html">Example #4</a> (Tilt)
+          <h1 class="beefy">Report Designer: Jaspersoft Studio</h1>
+          <img src="img/jaspersoft-studio.png" style="width: 800px; ">
         </section>
         <section>
           <h2>Thanks!</h2>
