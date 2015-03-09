@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MapFish Print 3</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="theme/c2c.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css">
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <style>
+      .reveal h1.beefy {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-shadow: 10px 10px 6px rgba(0, 0, 0, 0.2);
+      }
+      .reveal ul.plain {
+        list-style-type: none;
+      }
+      .reveal h2 {
+        margin-bottom: 40px;
+      }
+      .reveal h3 {
+        margin-bottom: 30px;
+      }
+      .reveal h2 > img {
+        vertical-align: sub;
+      }
+      .text-align-left {
+        text-align: left;
+      }
+      .ex-link {
+        font-size: smaller;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+      #logos > div {
+        padding: 0 10px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+      }
+      #logos > div img {
+        margin: 0;
+        vertical-align: text-bottom;
+      }
+      pre.narrow {
+        width: 50%;
+      }
+      #ol2-to-ol3 > img {
+        vertical-align: middle;
+      }
+
+    </style>
+
+    <script>
+        if (window.location.search.match( /print-pdf/gi ) ) {
+          var link = document.createElement( 'link' );
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = 'bower_components/reveal.js/css/print/pdf.css';
+          document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
+
+  </head>
+  <body>
+
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1 class="big">MapFish Print 3</h1>
+          <h2 style="font-style: italic;">Printing maps like a boss</h2>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <img src="img/logo_mapfish.png" style="opacity: 0.5;">
+          <img src="img/logo_c2c_px.png" style="opacity: 0.8;">
+          <p>&nbsp;</p>
+          <p>Tobias Sauerwein</p>
+          <p>Camptocamp</p>
+          <p>&nbsp;</p>
+          <!--
+          -->
+        </section>
+        <section>
+          <h1 class="beefy">Camptocamp</h1>
+          <img src="img/c2c_map.png" style="border: 1px solid #4b4b4d; width: 100%; ">
+        </section>
+        <section>
+          <h1 class="beefy">Camptocamp</h1>
+          <img src="img/c2c.png" style="opacity: 0.5; width: 100%; ">
+        </section>
+        <section>
+          <h1 class="beefy">MapFish Print?</h1>
+          <img src="img/sample_bl.png" style="width: 90%; ">
+        </section>
+        <section>
+          <h1 class="beefy">The past: MapFish Print 2</h1>
+          <div style="position: relative;">
+            <img src="img/mfp2.png" style="width: 90%; ">
+            <img src="img/sau.jpg" class="fragment"
+              style="width: 60%; position: absolute; right: 100px; bottom: -40px; opacity: 0.9;">
+          </div>
+        </section>
+        <section>
+          <h1 class="beefy">MapFish Print 3</h1>
+          <div style="position: relative; height: 500px;">
+            <div class="fragment"
+              style="position: absolute; top: 0px; left: 50px;">
+              <img src="img/logo_geotools.png"
+                style="height: 80px"><br>
+              <span>Mapping</span>
+            </div>
+            <div class="fragment"
+              style="position: absolute; top: 0px; right: 50px;">
+              <img src="img/logo_jasperreports.png"
+                style="height: 80px"><br>
+              <span>Layout</span>
+            </div>
+            <div class="fragment">
+              <img src="img/logo_spring.png"
+                style="width: 300px; margin-top: 150px;"><br>
+              <span>Plugin Framework</span>
+            </div>
+            <div class="fragment">
+              <img src="img/logo_mapfish.png"
+                style="width: 200px; opacity: 0.5; margin-top: 60px;">
+              <p style="font-weight: bold;">MapFish Print</p>
+              <p>Web API / Security / Widgets</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h1 class="beefy">Print Process</h1>
+          <img src="img/process.png" style="width: 600px; ">
+        </section>
+        <section>
+          <h1 class="beefy">YAML Configuration</h1>
+          <pre><code>
+templates:
+  A4 Portrait: !template
+    reportTemplate: report.jrxml
+    attributes:
+      ...
+    processors:
+      ...
+          </code></pre>
+        </section>
+        <section>
+          <h1 class="beefy">YAML Configuration (attributes)</h1>
+          <pre><code>
+templates:
+  A4 Portrait: !template
+    reportTemplate: report.jrxml
+    attributes:
+      title: !string {}
+      map: !map
+        width: 555
+        height: 730
+        maxDpi: 600
+      scalebar: !scalebar
+        width: 230
+        height: 40
+    processors:
+      ...
+          </code></pre>
+        </section>
+        <section>
+          <h1 class="beefy">YAML Configuration (processors)</h1>
+          <pre><code>
+templates:
+  A4 Portrait: !template
+    reportTemplate: report.jrxml
+    attributes:
+      ...
+    processors:
+    - !reportBuilder
+      directory: '.'
+    - !createMap
+      inputMapper: {map: map}
+      outputMapper: {mapSubReport: mapSubReport}
+    - !createScalebar {}
+          </code></pre>
+        </section>
+        <section>
+          <h1 class="beefy">Report Designer: Jaspersoft Studio</h1>
+          <img src="img/jaspersoft-studio.png" style="width: 800px; ">
+        </section>
+        <section>
+          <h1 class="beefy">Print Request</h1>
+          <pre><code>{
+  "layout": "A4 Portrait",
+  "outputFormat": "pdf",
+  "attributes": {
+    "title": "Sample Print",
+    "map": {
+      "projection": "EPSG:3857",
+      "dpi": 72,
+      "center": [957352.8034848921, 5936844.140278816],
+      "scale": 25000,
+      "layers": [
+        { "type": "osm", "baseURL": "http://tile.abc.com"}
+      ]
+    }
+  }
+}</code></pre>
+        </section>
+        <section>
+          <h1 class="beefy">Map Widgets</h1>
+          <img src="img/map_widgets.png" style="width: 800px; ">
+        </section>
+        <section>
+          <h1 class="beefy">Supported Geo-Data</h1>
+          <ul>
+            <li>Vector
+            <ul>
+              <li>GML</li>
+              <li>GeoJSON</li>
+              <li>WFS</li>
+            </ul>
+            </li>
+            <li>Raster
+            <ul>
+              <li>XYZ Tiles (OSM, ...)</li>
+              <li>(Tiled) WMS</li>
+              <li>WMTS</li>
+              <li>GeoTIFF</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section>
+          <h1 class="beefy">We got style!</h1>
+          <ul>
+            <li>Full GeoTools styling with <span class="fat">SLD</span></li>
+            <li><span class="fat">MapFish Print 2 JSON styles</span> (similar to OpenLayers 2 styles)</li>
+            <li><span class="fat">Improved JSON styles</span></li>
+          </ul>
+<pre class="fragment"><code>"[INTERSECTS(geometry, buffer(POLYGON (...), 2000))]": {
+  "symbolizers": [
+    {
+      "strokeColor": "green",
+      "strokeWidth": 2,
+      "type": "line"
+    }
+  ]
+},</code></pre>
+        </section>
+        <section>
+          <h1 class="big">Maps are cool.</h1>
+          <h1 class="big">But we can do more!</h1>
+        </section>
+        <section>
+          <h1 class="beefy">Tables</h1>
+          <a href="sample-reports/table.pdf" target="_blank"><img src="img/table.png" style="width: 800px; "></a>
+        </section>
+        <section>
+          <h1 class="beefy">What is more awesome than a map? More maps!</h1>
+          <img class="fragment" src="img/multiple-maps.png" style="width: 400px; ">
+          <img class="fragment" src="img/driving-directions.png" style="width: 300px; ">
+        </section>
+        <section>
+          <h1 class="beefy">Charts</h1>
+          <img src="img/charts.png" style="width: 800px; ">
+        </section>
+        <section>
+          <h1 class="beefy">External datasources</h1>
+          <img src="img/datasources.png" style="width: 800px; ">
+        </section>
+        <section>
+          <h1 class="beefy">Client side support</h1>
+          <p>CGXP Plugin: <a href="http://docs.camptocamp.net/cgxp/master/lib/plugins/Print.html"
+            target="_blank">cgxp.plugins.Print</a></p>
+          <img src="img/cgxp.png" style="width: 100%; ">
+        </section>
+        <section>
+          <h1 class="beefy">Pluggable Architecture</h1>
+          <img src="img/plugins.jpg" style="width: 800px;">
+        </section>
+        <section>
+          <h1 class="beefy">Backwards Compatibility</h1>
+          <ul style="height: 300px; ">
+            <li>Completely new configuration</li>
+            <li>Compatibility API for legacy clients</li>
+          </ul>
+        </section>
+        <section>
+          <h1 class="beefy">MapFish Print 3</h1>
+          <p>MapFish Print on GitHub: <br/><a href="https://github.com/mapfish/mapfish-print"
+              target="_blank">github.com/mapfish/mapfish-print</a></p>
+          <p>&nbsp;</p>
+          <p>This presentation on GitHub: <br/><a href="https://github.com/tsauerwein/talks_fossgis2015"
+              target="_blank">github.com/tsauerwein/talks_fossgis2015</a></p>
+          <p>&nbsp;</p>
+          <p>Me on GitHub/Twitter: <br/>@tsauerwein<br/>
+            <a href="https://github.com/tsauerwein"
+              target="_blank"><img src="img/github.png"></a>
+            <a href="https://twitter.com/tsauerwein"
+              target="_blank"><img src="img/twitter.png"></a>
+          </p>
+        </section>
+        <section>
+          <img src="img/logo_c2c_end.png" style="width: 100%; ">
+        </section>
+      </div>
+    </div>
+
+    <!-- reveal.js loading and configuration -->
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        rollingLinks: false,
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none,
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [{
+          src: 'bower_components/reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        }, {
+          src: 'bower_components/reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        }]
+      });
+
+    </script>
+  </body>
+</html>
