@@ -11,7 +11,7 @@ module.exports = function(grunt) {
       local: {
         // local files with no pre-processing
         expand: true,
-        src: ['mfp.html', 'img/**/*.*', 'theme/**/*.*'],
+        src: ['mfp.html', 'img/**/*.*', 'theme/**/*.*', 'sample-reports/**/*.*'],
         dest: build
       },
       examples: {

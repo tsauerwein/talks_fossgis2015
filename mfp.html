@@ -80,7 +80,7 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1 class="beefy">MapFish Print 3</h1>
+          <h1 class="big">MapFish Print 3</h1>
           <h2 style="font-style: italic;">Printing maps like a boss</h2>
           <p>&nbsp;</p>
           <p>&nbsp;</p>
@@ -92,6 +92,10 @@
           <p>&nbsp;</p>
           <!--
           -->
+        </section>
+        <section>
+          <h1 class="beefy">Camptocamp</h1>
+          <img src="img/c2c_map.png" style="border: 1px solid #4b4b4d; width: 100%; ">
         </section>
         <section>
           <h1 class="beefy">Camptocamp</h1>
@@ -194,7 +198,119 @@ templates:
           <img src="img/jaspersoft-studio.png" style="width: 800px; ">
         </section>
         <section>
-          <h2>Thanks!</h2>
+          <h1 class="beefy">Print Request</h1>
+          <pre><code>{
+  "layout": "A4 Portrait",
+  "outputFormat": "pdf",
+  "attributes": {
+    "title": "Sample Print",
+    "map": {
+      "projection": "EPSG:3857",
+      "dpi": 72,
+      "center": [957352.8034848921, 5936844.140278816],
+      "scale": 25000,
+      "layers": [
+        { "type": "osm", "baseURL": "http://tile.abc.com"}
+      ]
+    }
+  }
+}</code></pre>
+        </section>
+        <section>
+          <h1 class="beefy">Map Widgets</h1>
+          <img src="img/map_widgets.png" style="width: 800px; ">
+        </section>
+        <section>
+          <h1 class="beefy">Supported Geo-Data</h1>
+          <ul>
+            <li>Vector
+            <ul>
+              <li>GML</li>
+              <li>GeoJSON</li>
+              <li>WFS</li>
+            </ul>
+            </li>
+            <li>Raster
+            <ul>
+              <li>XYZ Tiles (OSM, ...)</li>
+              <li>(Tiled) WMS</li>
+              <li>WMTS</li>
+              <li>GeoTIFF</li>
+            </ul></li>
+          </ul>
+        </section>
+        <section>
+          <h1 class="beefy">We got style!</h1>
+          <ul>
+            <li>Full GeoTools styling with <span class="fat">SLD</span></li>
+            <li><span class="fat">MapFish Print 2 JSON styles</span> (similar to OpenLayers 2 styles)</li>
+            <li><span class="fat">Improved JSON styles</span></li>
+          </ul>
+<pre class="fragment"><code>"[INTERSECTS(geometry, buffer(POLYGON (...), 2000))]": {
+  "symbolizers": [
+    {
+      "strokeColor": "green",
+      "strokeWidth": 2,
+      "type": "line"
+    }
+  ]
+},</code></pre>
+        </section>
+        <section>
+          <h1 class="big">Maps are cool.</h1>
+          <h1 class="big">But we can do more!</h1>
+        </section>
+        <section>
+          <h1 class="beefy">Tables</h1>
+          <a href="sample-reports/table.pdf" target="_blank"><img src="img/table.png" style="width: 800px; "></a>
+        </section>
+        <section>
+          <h1 class="beefy">What is more awesome than a map? More maps!</h1>
+          <img class="fragment" src="img/multiple-maps.png" style="width: 400px; ">
+          <img class="fragment" src="img/driving-directions.png" style="width: 300px; ">
+        </section>
+        <section>
+          <h1 class="beefy">Charts</h1>
+          <img src="img/charts.png" style="width: 800px; ">
+        </section>
+        <section>
+          <h1 class="beefy">External datasources</h1>
+          <img src="img/datasources.png" style="width: 800px; ">
+        </section>
+        <section>
+          <h1 class="beefy">Client side support</h1>
+          <p>CGXP Plugin: <a href="http://docs.camptocamp.net/cgxp/master/lib/plugins/Print.html"
+            target="_blank">cgxp.plugins.Print</a></p>
+          <img src="img/cgxp.png" style="width: 100%; ">
+        </section>
+        <section>
+          <h1 class="beefy">Pluggable Architecture</h1>
+          <img src="img/plugins.jpg" style="width: 800px;">
+        </section>
+        <section>
+          <h1 class="beefy">Backwards Compatibility</h1>
+          <ul style="height: 300px; ">
+            <li>Completely new configuration</li>
+            <li>Compatibility API for legacy clients</li>
+          </ul>
+        </section>
+        <section>
+          <h1 class="beefy">MapFish Print 3</h1>
+          <p>MapFish Print on GitHub: <br/><a href="https://github.com/mapfish/mapfish-print"
+              target="_blank">github.com/mapfish/mapfish-print</a></p>
+          <p>&nbsp;</p>
+          <p>This presentation on GitHub: <br/><a href="https://github.com/tsauerwein/talks_fossgis2015"
+              target="_blank">github.com/tsauerwein/talks_fossgis2015</a></p>
+          <p>&nbsp;</p>
+          <p>Me on GitHub/Twitter: <br/>@tsauerwein<br/>
+            <a href="https://github.com/tsauerwein"
+              target="_blank"><img src="img/github.png"></a>
+            <a href="https://twitter.com/tsauerwein"
+              target="_blank"><img src="img/twitter.png"></a>
+          </p>
+        </section>
+        <section>
+          <img src="img/logo_c2c_end.png" style="width: 100%; ">
         </section>
       </div>
     </div>
